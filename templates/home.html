@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <h1>Welcome {{ user.name }}!</h1>
+    <p>This is the home page of our app. Here, you can rate different images and view your history of rated images.</p>
+  </head>
+  <body>
+    <h1> {{ user.name }} Home Screen</h1>
+    <img src="http://getdrawings.com/get-icon#one-icon-3.png" alt="One">
+    <p id="image-name">One</p>
+    <button id="reject-button">Reject</button>
+    <button id="accept-button">Accept</button>
+    <a href="{% url 'image_history' %}">My History</a>
+    <a href="{% url 'logout' %}">Logout</a>
+    <script>
+      var imageName = document.getElementById("image-name");
+      var rejectButton = document.getElementById("reject-button");
+      var acceptButton = document.getElementById("accept-button");
+      var images = ["http://getdrawings.com/get-icon#one-icon-3.png", "http://getdrawings.com/get-icon#free-shirt-icon-9.png", "http://getdrawings.com/get-icon#serial-number-icon-19.png", "http://getdrawings.com/get-icon#serial-number-icon-18.png", "http://getdrawings.com/get-icon#number-one-icon-17.png"];
+      var index = 0;
+      rejectButton.onclick = function() {
+        alert("{{ user.name }}, you have rejected image " + imageName.innerHTML);
+        nextImage();
+      };
+      acceptButton.onclick = function() {
+        alert("{{ user.name }}, you have selected image " + imageName.innerHTML);
+        nextImage();
+      };
+      setTimeout(nextImage, 5000);
+      function nextImage() {
+        if (index == images.length) {
+          alert("{{ user.name }}, you have rated all the images. Thank you!");
+          return;
+        }
+        var image = images[index];
+        imageName.innerHTML = image.split("-")[0].charAt(0).toUpperCase() + image.split("-")[0].slice(1);
+        document.getElementsByTagName("img")[0].src = image;
+        index += 1;
+        setTimeout(nextImage, 5000);
+      }
+    </script>
+</body>
+</html>

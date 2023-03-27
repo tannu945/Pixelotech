@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <h1>My History</h1>
+    </head>
+    <body>
+        <table>
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Image Name</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for rating in ratings %}
+                <tr>
+                <td>{{ rating.timestamp }}</td>
+                <td>{{ rating.image_name }}</td>
+                <td>{{ rating.action }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                <td colspan="3">No ratings yet</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

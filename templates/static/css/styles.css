@@ -1,0 +1,151 @@
+/* Add general styles here */
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Add specific styles for your app here */
+
+/* Styles for the Home page */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.home__title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.home__image {
+  max-width: 400px;
+  margin-bottom: 2rem;
+}
+
+.home__button {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home__button:hover {
+  background-color: #3E8E41;
+}
+
+/* Styles for the OTP Verification page */
+
+.otp-verification {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.otp-verification__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.otp-verification__input {
+  font-size: 1.5rem;
+  padding: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.otp-verification__button {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.otp-verification__button:hover {
+  background-color: #3E8E41;
+}
+
+/* Styles for the Rate Image page */
+
+.rate-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.rate-image__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.rate-image__image {
+  max-width: 400px;
+  margin-bottom: 2rem;
+}
+
+.rate-image__button-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.rate-image__button {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rate-image__button:hover {
+  background-color: #3E8E41;
+}
+
+/* Styles for the User History page */
+
+.user-history {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.user-history__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.user-history__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
